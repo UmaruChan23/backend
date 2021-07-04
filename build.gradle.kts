@@ -5,6 +5,7 @@ plugins {
 	id("org.springframework.boot") version "2.5.2"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
 	id("org.jetbrains.kotlin.plugin.noarg") version "1.5.20-RC"
+	id("org.jetbrains.kotlin.plugin.jpa") version "1.5.20-RC"
 	id("com.github.johnrengelman.shadow") version "7.0.0"
 	kotlin("jvm") version "1.5.20"
 	kotlin("plugin.spring") version "1.5.20"
@@ -31,7 +32,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.5.2")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("com.mbed.java-coap:coap-core:5.0.0")
-	runtimeOnly("org.postgresql:postgresql:42.2.22")
+	implementation("org.postgresql:postgresql:42.2.22")
 	implementation("org.apache.logging.log4j:log4j-core:2.14.1")
 	implementation("org.apache.logging.log4j:log4j-api:2.14.1")
 }
