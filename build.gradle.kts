@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "com.example"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.1"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 application {
@@ -24,7 +24,6 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
@@ -32,7 +31,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.5.2")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("com.mbed.java-coap:coap-core:5.0.0")
-	implementation("org.postgresql:postgresql:42.2.22")
+	runtimeOnly("org.postgresql:postgresql:42.2.22")
 	implementation("org.apache.logging.log4j:log4j-core:2.14.1")
 	implementation("org.apache.logging.log4j:log4j-api:2.14.1")
 }
