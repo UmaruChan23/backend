@@ -6,7 +6,6 @@ plugins {
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
 	id("org.jetbrains.kotlin.plugin.noarg") version "1.5.20-RC"
 	id("org.jetbrains.kotlin.plugin.jpa") version "1.5.20-RC"
-	id("com.github.johnrengelman.shadow") version "7.0.0"
 	kotlin("jvm") version "1.5.20"
 	kotlin("plugin.spring") version "1.5.20"
 }

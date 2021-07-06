@@ -14,7 +14,8 @@ import java.util.concurrent.TimeUnit
 import kotlin.collections.ArrayList
 
 @Service
-class MetricsService(@Autowired val repo: MetricsRepo, @Autowired val detectRepo: DetectorsRepo) {
+class MetricsService(@Autowired val repo: MetricsRepo,
+                     @Autowired val detectRepo: DetectorsRepo) {
 
     fun listByTimestamp(id: Int): List<MetricsModel> {
         val finds: ArrayList<Sensor> = repo.findBySensorId(id)

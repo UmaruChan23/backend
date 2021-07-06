@@ -30,7 +30,9 @@ class CoAPFactory(@Autowired val res: SimpleCoapResource) {
     }
 
     @Component
-    class SimpleCoapResource(@Autowired val repo: MetricsRepo, @Autowired val detectorsRepo: DetectorsRepo, @Value("\${api.key:def}")
+    class SimpleCoapResource(@Autowired val repo: MetricsRepo,
+                             @Autowired val detectorsRepo: DetectorsRepo,
+                             @Value("\${api.key:def}")
     val key: String) :
         CoapResource() {
 

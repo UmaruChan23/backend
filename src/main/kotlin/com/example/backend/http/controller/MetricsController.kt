@@ -22,7 +22,7 @@ class MetricsController(private val service: MetricsService) {
     }
 
     @PostMapping
-    fun insertSensor(@RequestParam name: String): ResponseEntity<Int> {
+    fun insertSensor(@RequestBody name: String): ResponseEntity<Int> {
         return ResponseEntity.ok(service.insertSensor(name))
     }
 

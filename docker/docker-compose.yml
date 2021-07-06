@@ -8,6 +8,9 @@ services:
       - POSTGRES_PASSWORD=alidip97
     ports:
       - 5432:5432
+    build:
+      context: .
+      dockerfile: ../BdDockerfile
 
   app:
     image: demo:latest
@@ -15,7 +18,10 @@ services:
       - PSQL_DB_USERNAME=postgres
       - PSQL_DB_PASSWORD=alidip97
       - ACTIVE_KEY=HLQgX9L7+ZGB7QZQo5s+Q89J1gyVPdGcHjnX7Mdpj9U=
-      - PSQL_DB_HOST=localhost
+      - PSQL_DB_HOST=db
       - PSQL_DB_PORT=5432
     depends_on:
       - db
+    ports:
+      - 8080:8080
+      - 5683:5683/udp
